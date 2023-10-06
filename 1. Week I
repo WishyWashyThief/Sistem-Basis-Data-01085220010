@@ -1,0 +1,49 @@
+## 📘 My Personal Notes
+
+### 🗓️ Week 1: Introduction to Database (DB)
+
+#### 📍 Definition and Purpose of Database
+- _Poin-poin Utama_
+Database merupakan suatu koleksi terorganisir yang berisikan informasi dan data terstruktur yang tersimpan di dalam sistem komputer.
+Database menyimpan data dengan efisien dalam bentuk kolom dan baris pada beberapa kumpulan tabel.
+Tabel dalam suatu database biasanya terhubung dengan tabel lain sehingga memungkinkan pembuatan suatu tabel yang efisien dan minimalis (kolom).
+- _Contoh/Use-Case_
+Contoh penggunaan database adalah saat menyimpan data-data suatu karyawan/dosen, murid, kelas, dan bangunan-bangunan pada suatu universitas kita bisa menggunakan database. Data dosen bisa disimpan pada tabel dosen, data murid disimpan pada tabel murid, dst.
+Penyimpanan data stock barang di supermarket juga bisa menggunakan database. Beberapa tabel bisa dibuat saling berhubungan agar mempermudah pemrosesan data suatu produk. 
+- _Catatan Tambahan_
+Bahasa pemrograman SQL digunakan untuk mengotak-atik database dengan menggunakan query. Dengan SQL kita bisa membuat database, tabel, memasukan data, mengubah data, menghapus data, tabel, melihat dan menyaring data.
+
+#### 📍 View of Data
+- _Poin-poin Utama_
+View of data mengacu pada bagaimana data divisualisasikan pada 3 level abstraksi data yaitu physical level, logical level, dan view level.
+Abstraksi data memungkinkan developer untuk menyembunyikan struktur data dari user.
+Physical level yaitu bagaimana suatu data disimpan pada storage dan path untuk mengaksesnya. Level ini hanya bisa diketahui oleh admin database.
+Logical level yaitu data apa yang akan disimpan dalam database. Termasuk penghubung antar data (hubungan data) dan constraint yang diaplikasikan. Level ini bisa diketahui oleh admin database dan programer (pengguna SQL software)
+View atau external level yaitu aplikasi yang digunakan oleh user untuk mengambil informasi dari database. Level ini adalah saat user ingin mengakses suatu data.
+- _Contoh/Use-Case_
+Saat kita ingin membuat database universitas, entitas yang akan digunakan adalah murid, dosen, kelas/jurusan, dst.
+Entitas-entitas tersebut akan disimpan di blok memori yang tidak bisa diketahui oleh programer, hanya diketahui oleh database administrator saja.(Physical level)
+Selanjutnya programer menggunakan bahasa pemrograman SQL untuk memasukan data kedalam entitas-entitas tersebut dan hubungan antar entitas yang ada. (Logical level)
+Data yang sudah ada bisa diakses oleh user menggunakan aplikasi tertentu (misal web.academic.uph.edu) sesuai dengan akses yang telah diberikan (ada data yang hidden dan data yang bisa dilihat/diubah).
+- _Catatan Tambahan_
+
+#### 📍 DB Languages, Design, Architecture, and Users and Administrator
+- _Poin-poin Utama_
+DB language adalah serial bahasa permograman yang digunakan oleh developers untuk mengakses database. Biasanya disebut juga sebagai query language.
+DB language terbagi menjadi Data Definition Language (DDL), Data Control Language (DCL), Data Manipulation Language (DML), dan Transaction Control Language (TCL).
+DB design merupakan proses data model dari suatu database. Data model sendiri terbagi menjadi 2 yaitu physical model dan logical model.
+Logical data model adalah model data yang berisi deskripsi yang detil dan terstruktur dari suatu elemen data dan koneksi/relasi diantaranya. Contohnya entitas (dosen, murid, jurusan) dan relasi antar entitas tersebut.
+Physical data model berisi bagaimana suatu model data akan dibangun dalam database. Berisi struktur tabel (nama kolom, tipe data, constraint, primary key, foreign key yang menghubungkan ke tabel lain), relasi antar tabel.
+DB architecture terbagi menjadi beberapa tier, mengacu kepada bagaimana suatu database bisa diakses oleh suatu user. 
+1-tier architecture berarti database dan aplikasi yang akan digunakan untuk mengakses database tersebut berada pada device yang sama.
+2-tier architecture berarti user bisa mengakses database melalui suatu aplikasi tanpa perantara.
+3-tier architecture berarti user harus menggunakan aplikasi untuk mengakses server database dengan perantara aplikasi lain. Aplikasi client/user >> aplikasi server >> database server.
+DB user adalah orang yang berinteraksi dengan data dalam database. Setiap user memiliki level akses yang berbeda tergantung dari privilege yang diberikan oleh admin database tersebut.
+DB administrator adalah insinyur (pembuat, pengisi, pengatur) suatu database.
+- _Contoh/Use-Case_
+Contoh DB language:
+  DDL >> CREATE(membuat tabel,database,user,dll), ALTER(mengubah), DROP(menghapus), TRUNCATE, COMMENT, RENAME
+  DML >> INSERT, UPDATE, DELETE, MERGE, CALL, EXPLAIN PLAN, SELECT (data pada tabel)
+  DCL >> GRANT, REVOKE (privilege)
+  TCL >> COMMIT, ROLLBACK, SAVEPOINT, AUTOCOMMIT
+- _Catatan Tambahan_
